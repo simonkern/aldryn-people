@@ -18,7 +18,7 @@ class Vcard(object):
         else:
             value = ';'.join(self.__escape(x) for x in value)
 
-        line = '{0}:{1}'.format(key_and_params, value)
+        line = u'{0}:{1}'.format(key_and_params, value)
         self.lines.append(line)
 
     def __escape(self, value):

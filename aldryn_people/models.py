@@ -330,6 +330,9 @@ class Person(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
             if self.primary_group.website:
                 vcard.add_line('URL', self.primary_group.website)
 
+        if six.PY2:
+            vcard = unicode(vcard)
+
         return unicode(vcard)
 
 

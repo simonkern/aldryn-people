@@ -333,7 +333,7 @@ class Person(TranslationHelperMixin, TranslatedAutoSlugifyMixin,
         if six.PY2:
             vcard = unicode(vcard)
 
-        return unicode(vcard)
+        return vcard
 
 
 @python_2_unicode_compatible
